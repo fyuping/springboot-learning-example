@@ -2,6 +2,7 @@ package org.spring.springboot.dao;
 
 import org.apache.ibatis.annotations.Param;
 import org.spring.springboot.domain.City;
+import org.spring.springboot.resultset.CachedRowSetHandler;
 
 /**
  * 城市 DAO 接口类
@@ -16,4 +17,6 @@ public interface CityDao {
      * @param cityName 城市名
      */
     City findByName(@Param("cityName") String cityName);
+
+    Object findByName( CachedRowSetHandler resultHandler,@Param("cityName") String cityName);
 }

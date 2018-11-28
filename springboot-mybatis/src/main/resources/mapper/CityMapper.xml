@@ -14,7 +14,7 @@
 		id, province_id, city_name, description
 	</sql>
 
-	<select id="findByName" resultMap="BaseResultMap" parameterType="java.lang.String">
+	<select id="findByName" resultMap="BaseResultMap" >
 		select
 		<include refid="Base_Column_List" />
 		from city
